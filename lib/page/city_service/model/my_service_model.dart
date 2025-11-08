@@ -29,6 +29,7 @@ enum MyServiceItemId {
   library,
   locationSearch,
   zoo,
+  temp,
   ;
 }
 
@@ -183,6 +184,13 @@ extension MyServiceIdExt on MyServiceItemId {
           category: MyServiceCategory.explore,
           destinationUrl: '',
         ),
+      MyServiceItemId.temp => MyServiceItem(
+        title: '待用餐',
+        description: '過來吃飯',
+        icon: Assets.image.lunchboxPovImg.image(),
+        category: MyServiceCategory.poverty,
+        destinationUrl: 'https://google.com',
+      ),
     };
   }
 }
@@ -210,6 +218,7 @@ enum MyServiceCategory {
   healthCare,
   cityLife,
   explore,
+  poverty,
   other,
   ;
 }
@@ -221,6 +230,7 @@ extension MyServiceCategoryExt on MyServiceCategory {
       MyServiceCategory.healthCare => '防疫醫療',
       MyServiceCategory.cityLife => '城市生活',
       MyServiceCategory.explore => '探索臺北',
+      MyServiceCategory.poverty => '關懷弱勢',
       MyServiceCategory.other => '其他服務',
     };
   }
