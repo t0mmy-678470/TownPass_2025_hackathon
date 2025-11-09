@@ -5,6 +5,7 @@ import 'package:town_pass/util/tp_colors.dart';
 import 'package:town_pass/util/tp_constant.dart';
 import 'package:town_pass/util/tp_line.dart';
 import 'package:town_pass/util/tp_text.dart';
+import 'package:town_pass/util/tp_route.dart';
 
 class OfficialServiceCardBottomLeft extends OfficialServiceCard {
   const OfficialServiceCardBottomLeft({super.key});
@@ -35,9 +36,9 @@ class _Health extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       behavior: HitTestBehavior.opaque,
-      onTap: () async {
-        // TODO: add link
-      },
+      onTap: () async => await TPRoute.openUri(
+        uri: 'local://anti_fraud',
+      ),
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 12),
         child: Row(
@@ -47,13 +48,13 @@ class _Health extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   TPText(
-                    '防疫醫療',
+                    '詐騙查驗',
                     style: TPTextStyles.h3SemiBold,
                     color: TPColors.primary500,
                     overflow: TextOverflow.ellipsis,
                   ),
                   TPText(
-                    'Health',
+                    'AntiFraud',
                     style: TPTextStyles.caption,
                     color: TPColors.grayscale700,
                     overflow: TextOverflow.ellipsis,

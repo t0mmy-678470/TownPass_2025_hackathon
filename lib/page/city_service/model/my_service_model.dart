@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:town_pass/gen/assets.gen.dart';
+import 'package:town_pass/util/tp_route.dart';
 
 // 先於 MyServiceItemId enum 加入新服務；
 // 再在 MyServiceIdExt 擴充中加入該服務的 MyServiceItem 物件。
@@ -189,7 +190,7 @@ extension MyServiceIdExt on MyServiceItemId {
         description: '過來吃飯',
         icon: Assets.image.lunchboxPovImg.image(),
         category: MyServiceCategory.poverty,
-        destinationUrl: 'https://google.com',
+        destinationUrl: "local://online_police",
       ),
     };
   }
