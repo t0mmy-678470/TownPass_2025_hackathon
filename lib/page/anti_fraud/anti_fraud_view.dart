@@ -39,6 +39,9 @@ class _AntiFraudViewState extends State<AntiFraudView> with TickerProviderStateM
 
   bool _isChecking = false;
 
+    // API endpoint URI
+  static const String _apiUrl = ''; // <- PUT_YOUR_API_ENDPOINT_HERE
+
   // Example “5-point check” messages
   final List<StepInfo> _baseSteps = [
     StepInfo('NordVPN 檢測'),
@@ -96,7 +99,7 @@ class _AntiFraudViewState extends State<AntiFraudView> with TickerProviderStateM
       await Future.delayed(const Duration(milliseconds: 600));
     }
 
-    final uri = Uri.parse('http://140.115.238.230:8001/test_url');
+    final uri = Uri.parse(_apiUrl);
     final headers = {'Content-Type': 'application/json'};
     final body = jsonEncode({'url': input});
 
