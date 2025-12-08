@@ -40,7 +40,7 @@ class _AntiFraudViewState extends State<AntiFraudView> with TickerProviderStateM
   bool _isChecking = false;
 
     // API endpoint URI
-  static const String _apiUrl = ''; // <- PUT_YOUR_API_ENDPOINT_HERE
+  static const String _apiUrl = 'https://antifraud.t1nf.org/test_url'; // <- PUT_YOUR_API_ENDPOINT_HERE
 
   // Example “5-point check” messages
   final List<StepInfo> _baseSteps = [
